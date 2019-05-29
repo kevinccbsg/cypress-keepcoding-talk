@@ -5,5 +5,6 @@
   "env": {
     "apiURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/user/login",
     "resetLikeURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/beers/4/resetlike"
-  }
+  },
+  "projectId": "pmwq2w"
 }
