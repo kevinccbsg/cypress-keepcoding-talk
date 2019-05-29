@@ -1,3 +1,9 @@
 {
-  "baseUrl": "https://nodepop-app-otmjvkqhfy.now.sh"
+  "baseUrl": "https://nodepop-app-otmjvkqhfy.now.sh",
+  "viewportWidth": 414,
+  "viewportHeight": 736,
+  "env": {
+    "apiURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/user/login",
+    "resetLikeURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/beers/4/resetlike"
+  }
 }

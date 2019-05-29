@@ -23,3 +23,35 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', ({ user = '', fakePWD = '' } = {}) => {
+  if (!user && !fakePWD) {
+    // API login
+    cy
+      .request('POST', Cypress.env('apiURL'), {
+        email: 'briammartinez@gmail.com',
+      })
+      .then(({ body }) => {
+        const { user } = body;
+        cy.setCookie('token', user.apiKey);
+        cy.visit('/home');
+      })
+  } else {
+    // end to end login
+    cy.get('[data-cy=email-input]').type(user);
+    cy.get('[data-cy=password-input]').type(`${fakePWD}{enter}`, { log: false });
+  }
+});
+
+
+Cypress.Commands.add('cleanBeerLike', () => {
+  cy.getCookie('token')
+  .then(cookie => {
+    cy.request({
+      method: 'DELETE',
+      url: Cypress.env('resetLikeURL'),
+      headers: {
+        'X-API-KEY': cookie.value,
+      },
+    });
+  });
+});
