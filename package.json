@@ -4,12 +4,17 @@
   "description": "Cypress talk repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "./node_modules/.bin/cypress open",
+    "run": "./node_modules/.bin/cypress run"
   },
   "keywords": [
     "node",
     "cypress"
   ],
   "author": "Kevin Julián Martínez Escobar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.3.1"
+  }
 }
