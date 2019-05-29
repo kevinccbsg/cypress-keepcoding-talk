@@ -28,7 +28,7 @@ Cypress.Commands.add('login', ({ user = '', fakePWD = '' } = {}) => {
     // API login
     cy
       .request('POST', Cypress.env('apiURL'), {
-        email: 'briammartinez@gmail.com',
+        email: Cypress.env('testUser'),
       })
       .then(({ body }) => {
         const { user } = body;

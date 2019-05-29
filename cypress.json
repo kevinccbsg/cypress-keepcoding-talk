@@ -3,6 +3,7 @@
   "viewportWidth": 414,
   "viewportHeight": 736,
   "env": {
+    "testUser": "test@test.com",
     "apiURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/user/login",
     "resetLikeURL": "https://web-bootcamp-exercise-beer-api-mtzmldlblg.now.sh/api/v1/beers/4/resetlike"
   },
