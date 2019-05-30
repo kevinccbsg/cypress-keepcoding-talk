@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "open": "./node_modules/.bin/cypress open",
-    "run": "./node_modules/.bin/cypress run",
-    "record": "./node_modules/.bin/cypress run --record --key 73ceffee-07bc-47b2-b38d-28079a7601f8"
+    "headless": "./node_modules/.bin/cypress run"
   },
   "keywords": [
     "node",
